@@ -160,7 +160,7 @@ if($method == 'POST')
 		{
 			foreach ($someobj["results"] as $value) 
 			{
-				$speech .= $value["SHOP_NAME"]." availabe in ".$value["CITY"]." in ".$value["STATE"];
+				$speech .= $value["SHOP_NAME"];
 				$speech .= "\r\n";
 			 }
 		}
