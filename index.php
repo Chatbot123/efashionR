@@ -67,9 +67,9 @@ if($method == 'POST')
 		if (in_array($QTR, $userespnose)) {$QTR='0';}
 		if (in_array($MTH, $userespnose)) {$MTH='0';}
 		$useres = array("PLEASEIGNORE", "IGNORE","IGNOREIT");
-		if (in_array($STATE, $userespnose)) {$STATE='0';}
-		if (in_array($CITY, $userespnose)) {$CITY='0';}
-		if (in_array($SHOPNAME, $userespnose)) {$SHOPNAME='0';}
+		if (in_array($STATE, $useres)) {$STATE='0';}
+		if (in_array($CITY, $useres)) {$CITY='0';}
+		if (in_array($SHOPNAME, $useres)) {$SHOPNAME='0';}
 		if (in_array($FAMILY, $useres)) {$FAMILY='0';}
 		if (in_array($CATEGORY, $useres)) {$CATEGORY='0';}
 		if (in_array($ARTICLE, $useres)) {$ARTICLE='0';}    
