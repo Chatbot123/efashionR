@@ -19,7 +19,7 @@ try {
     // close curl resource to free up system resources
     curl_close($ch);
 }catch (Exception $e) {
-    $speech = "Welcome to India";
+    $speech = $e->getMessage();
     $fulfillment = new stdClass();
     $fulfillment->speech = $speech;
     $result = new stdClass();
