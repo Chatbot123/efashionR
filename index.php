@@ -19,10 +19,8 @@ $sessionID = uniqid('',true);
 						'Authorization: Bearer a7fa07b1e8cb46bc881c1a8bd1491838'
 											),
 			CURLOPT_POSTFIELDS	=> array( "lang": "en",
-							 "query": "I need apples",
-							 
-							
-							"event": "TESTEVENT"
+							 "query": "Hi",
+							 "e": "TESTEVENT"
 			
 							)
     		);
