@@ -24,10 +24,10 @@ if (curl_errno($ch)) {
 }
 
 curl_close ($ch);
-$response = new \stdClass();
-    	$response->fulfillmentText = $speech;
-    	$response->source = "webhook";
-	echo json_encode($response);
+//$response = new \stdClass();
+    //	$response->fulfillmentText = $speech;
+    //	$response->source = "webhook";
+	echo json_encode($speech);
 /*}
 else
 {
