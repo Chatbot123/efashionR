@@ -12,10 +12,15 @@ $headers[] = "Content-Type: application/json; charset=utf-8";
 $headers[] = "Authorization: Bearer a7fa07b1e8cb46bc881c1a8bd1491838";
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
-$result = curl_exec($ch);
+$json = curl_exec($ch);
+$speech = json_decode($json,true);
 if (curl_errno($ch)) {
-    echo 'Error:' . curl_error($ch);
+    $speech =  'Error:' . curl_error($ch);
 }
+$response = new \stdClass();
+    	$response->fulfillmentText = $speech;
+    	$response->source = "webhook";
+	echo json_encode($response);
 curl_close ($ch);
 ?>
 	
