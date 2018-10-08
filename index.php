@@ -1,5 +1,8 @@
 <?php
-
+$method = $_SERVER['REQUEST_METHOD'];
+//process only when method id post
+if($method == 'POST')
+{
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "https://api.api.ai/api/query?v=20150910");
@@ -22,7 +25,7 @@ $response = new \stdClass();
     	$response->source = "webhook";
 	echo json_encode($response);
 curl_close ($ch);
-
+}
 
 ?>
 	
