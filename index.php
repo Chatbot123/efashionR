@@ -1,13 +1,10 @@
 <?php
-$method = $_SERVER['REQUEST_METHOD'];
-//process only when method id post
-if($method == 'POST')
-{
+
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "https://api.api.ai/api/query?v=20150910");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, "{'event':{ 'name': 'TESTEVENT', \n'parameters': {'name': 'Rachna'}}, \n'timezone':'Asia/Calcutta', 'lang':'en', 'sessionId':'1321321'}");
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{'event':{ 'name': 'TESTEVENT', 'parameters': {'name': 'Rachna'}}, 'timezone':'Asia/Calcutta', 'lang':'en', 'sessionId':'1321321'}");
 curl_setopt($ch, CURLOPT_POST, 1);
 
 $headers = array();
@@ -25,7 +22,7 @@ $response = new \stdClass();
     	$response->source = "webhook";
 	echo json_encode($response);
 curl_close ($ch);
-}
+
 
 ?>
 	
