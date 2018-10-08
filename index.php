@@ -18,7 +18,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 $json = curl_exec($ch);
 $someobj = json_decode($json,true);
 
-$speech = $someobj->fulfillmentText->fulfillment->messages[1];
+$speech = $someobj;
 if (curl_errno($ch)) {
     $speech =  'Error:' . curl_error($ch);
 }
