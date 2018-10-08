@@ -1,5 +1,5 @@
 <?php
-$method = $_SERVER['REQUEST_METHOD'];
+//$method = $_SERVER['REQUEST_METHOD'];
 //process only when method id post
 //if($method == 'POST')
 //{
