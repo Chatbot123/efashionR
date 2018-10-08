@@ -25,7 +25,7 @@ $response = new \stdClass();
     	$response->source = "webhook";
 	echo json_encode($response);
 curl_close ($ch);
-}
+//}
 //else
 //{
 	//echo "Method not allowed";
