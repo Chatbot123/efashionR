@@ -1,8 +1,8 @@
 <?php
-$method = $_SERVER['REQUEST_METHOD'];
+/*$method = $_SERVER['REQUEST_METHOD'];
 //process only when method id post
 if($method == 'POST')
-{
+{*/
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "https://api.dialogflow.com/v1/query?v=20150910");
@@ -16,7 +16,9 @@ $headers[] = "Authorization: Bearer a7fa07b1e8cb46bc881c1a8bd1491838";
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $json = curl_exec($ch);
-$speech = json_decode($json,true);
+$someobj = json_decode($json,true);
+
+$speech = $someobj->fulfillmentText->fulfillment->speech;
 if (curl_errno($ch)) {
     $speech =  'Error:' . curl_error($ch);
 }
@@ -26,10 +28,10 @@ $response = new \stdClass();
     	$response->fulfillmentText = $speech;
     	$response->source = "webhook";
 	echo json_encode($response);
-}
+/*}
 else
 {
 	echo "Method not allowed";
-}
+}*/
 ?>
 	
