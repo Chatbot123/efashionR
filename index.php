@@ -1,5 +1,8 @@
 <?php
-
+$method = $_SERVER['REQUEST_METHOD'];
+//process only when method id post
+if($method == 'POST')
+{
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "https://api.dialogflow.com/v1/query?v=20150910");
@@ -23,6 +26,10 @@ $response = new \stdClass();
     	$response->fulfillmentText = $speech;
     	$response->source = "webhook";
 	echo json_encode($response);
-
+}
+else
+{
+	echo "Method not allowed";
+}
 ?>
 	
