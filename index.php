@@ -30,7 +30,7 @@ $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "https://api.dialogflow.com/v1/query?v=20150910");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"lang\": \"en\", \"sessionId\":\"12345\",\"event\":{\"name\":\"TESTEVENT\",\"data\":{\"user_name\":\"apple\"}}}");
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"lang\": \"en\", \"sessionId\":\"12345\",\"event\":{\"name\":\"TESTEVENT\",\"data\":{\"user_name\":\"Rachna\"}}}");
 curl_setopt($ch, CURLOPT_POST, 1);
 
 $headers = array();
