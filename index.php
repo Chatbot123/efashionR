@@ -26,7 +26,7 @@ if (curl_errno($ch)) {
 curl_close ($ch);
 $response = new \stdClass();
     	$response->results = $speech;
-    	$response->source = "webhook";*/
+    	$response->source = "webhook";
 	echo json_encode($response);
 /*}
 else
