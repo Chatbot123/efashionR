@@ -24,11 +24,11 @@ if (curl_errno($ch)) {
 }
 //$speech = $someobj->id;  result->fulfillment->speech;
 curl_close ($ch);
-///$response = new \stdClass();
-    	//$response->fulfillmentText = $speech;
-    	//$response->source = "webhook";*/
-	echo json_encode($speech);
-/*}
+$response = new \stdClass();
+    	$response->results = $speech;
+    	$response->source = "webhook";*/
+	echo json_encode($response);
+}
 else
 {
 	echo "Method not allowed";
