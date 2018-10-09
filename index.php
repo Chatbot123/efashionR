@@ -28,7 +28,7 @@ $response = new \stdClass();
     	$response->results = $speech;
     	$response->source = "webhook";*/
 	echo json_encode($response);
-}
+/*}
 else
 {
 	echo "Method not allowed";
