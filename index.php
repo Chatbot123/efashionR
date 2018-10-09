@@ -22,7 +22,7 @@ $someobj = json_decode($json,true);
 if (curl_errno($ch)) {
     $speech =  'Error:' . curl_error($ch);
 }
-$speech = $someobj->result->fulfillment->speech;
+$speech = $someobj->id;
 curl_close ($ch);
 $response = new \stdClass();
     	$response->fulfillmentText = $speech;
