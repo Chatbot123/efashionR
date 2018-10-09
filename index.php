@@ -18,16 +18,16 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 $json = curl_exec($ch);
 $someobj = json_decode($json,true);
 
-//$speech = $someobj;
+$speech = $someobj;
 if (curl_errno($ch)) {
     $speech =  'Error:' . curl_error($ch);
 }
-$speech = $someobj->id;
+//$speech = $someobj->id;  result->fulfillment->speech;
 curl_close ($ch);
-$response = new \stdClass();
-    	$response->fulfillmentText = $speech;
-    	$response->source = "webhook";*/
-	echo json_encode($response);
+///$response = new \stdClass();
+    	//$response->fulfillmentText = $speech;
+    	//$response->source = "webhook";*/
+	echo json_encode($speech);
 /*}
 else
 {
