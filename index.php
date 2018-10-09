@@ -27,7 +27,7 @@ curl_close ($ch);
 $response = new \stdClass();
     	$response->results = $speech;
     	$response->source = "webhook";
-	echo json_encode($response);
+	echo json_encode($response->results->id);
 /*}
 else
 {
