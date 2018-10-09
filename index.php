@@ -22,10 +22,10 @@ $someobj = json_decode($json,true);
 if (curl_errno($ch)) {
     $speech =  'Error:' . curl_error($ch);
 }
-
+$speech = $someobj->result->fulfillment->speech;
 curl_close ($ch);
 $response = new \stdClass();
-    	$response->fulfillmentText = $someobj->result->fulfillment->speech;
+    	$response->fulfillmentText = $speech;
     	$response->source = "webhook";*/
 	echo json_encode($response);
 /*}
